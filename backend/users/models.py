@@ -14,7 +14,9 @@ class UserRole:
 
 
 class User(AbstractUser):
-    """Модель пользователей."""
+    """
+    Модель пользователей.
+    """
     username_validator = UnicodeUsernameValidator()
     username = models.CharField(
         max_length=150,
@@ -43,7 +45,9 @@ class User(AbstractUser):
 
 
 class Follow(models.Model):
-    """Модель подписок."""
+    """
+    Модель подписок.
+    """
     user = models.ForeignKey(
         User,
         on_delete=models.CASCADE,

@@ -4,15 +4,14 @@ from .models import Cart, Favorite, Ingredient, IngredientRecipe, Recipe, Tag
 
 
 class BaseAdminSettings(admin.ModelAdmin):
-    """Базовая кастомизация админ панели."""
+    """Базовая модель админки."""
     empty_value_display = '-пусто-'
     list_filter = ('author', 'name', 'tags')
 
 
 class IngredientRecipeInline(admin.TabularInline):
     """
-    Параметры настроек админ зоны
-    модели ингредиентов в рецепте.
+    Админка ингридиентов в рецепте.
     """
     model = IngredientRecipe
     extra = 0
@@ -21,7 +20,7 @@ class IngredientRecipeInline(admin.TabularInline):
 @admin.register(Tag)
 class TagAdmin(BaseAdminSettings):
     """
-    Кастомизация админ панели (управление тегам).
+    Админка тэгов.
     """
     list_display = (
         'name',
@@ -36,7 +35,7 @@ class TagAdmin(BaseAdminSettings):
 @admin.register(Ingredient)
 class IngredientAdmin(BaseAdminSettings):
     """
-    Кастомизация админ панели (управление ингредиентами).
+    Админка ингридиентов.
     """
     list_display = (
         'name',
@@ -50,7 +49,7 @@ class IngredientAdmin(BaseAdminSettings):
 @admin.register(Recipe)
 class RecipeAdmin(BaseAdminSettings):
     """
-    Кастомизация админ панели (управление рецептами).
+    Админка рецептов.
     """
     list_display = (
         'name',
@@ -73,7 +72,7 @@ class RecipeAdmin(BaseAdminSettings):
 @admin.register(IngredientRecipe)
 class IngredientRecipeAdmin(admin.ModelAdmin):
     """
-    Кастомизация админ панели (управление ингридиентами в рецептах).
+    Админка ингридиентов в рецепте.
     """
     list_display = (
         'recipe',
@@ -86,7 +85,7 @@ class IngredientRecipeAdmin(admin.ModelAdmin):
 @admin.register(Favorite)
 class FavoriteAdmin(admin.ModelAdmin):
     """
-    Кастомизация админ панели (управление избранных рецептов).
+    Админка избранных рецептов.
     """
     list_display = ('user', 'recipe')
     list_filter = ('user', 'recipe')
@@ -96,7 +95,7 @@ class FavoriteAdmin(admin.ModelAdmin):
 @admin.register(Cart)
 class CartAdmin(admin.ModelAdmin):
     """
-    Кастомизация админ панели (управление избранных рецептов).
+    Админка корзины.
     """
     list_display = ('recipe', 'user')
     list_filter = ('recipe', 'user')
