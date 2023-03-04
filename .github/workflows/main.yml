@@ -70,7 +70,7 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             sudo docker-compose stop
-            sudo docker-compose rm web
+            sudo docker-compose rm app
             touch .env
             echo SECRET_KEY=${{ secrets.SECRET_KEY }} >> .env 
             echo DB_ENGINE=${{ secrets.DB_ENGINE }} >> .env
