@@ -35,6 +35,7 @@ CI/CD.
 2. Создайте .env файл в директории backend/foodgram/
 
     ```
+    SECRET_KEY=Optional
     DB_ENGINE=django.db.backends.postgresql
     DB_NAME=postgres
     POSTGRES_USER=postgres
