@@ -2,7 +2,6 @@ version: '3.8'
 services:
 
   db:
-    container_name: db
     image: postgres:13.0-alpine
     platform: linux/x86_64
     volumes:
@@ -11,7 +10,6 @@ services:
       - ../backend/foodgram/.env
 
   backend:
-    container_name: app
     image: pavelhomov/foodgram-backend:latest
     platform: linux/x86_64
     restart: always
@@ -21,10 +19,9 @@ services:
     depends_on:
       - db
     env_file:
-      - ../backend/foodgram/.env
+      - ../pavelhomov/backend/foodgram/.env
 
   frontend:
-    container_name: front
     image: pavelhomov/foodgram-frontend:latest
     platform: linux/x86_64
     volumes:
@@ -33,7 +30,6 @@ services:
       - backend
 
   nginx:
-    container_name: proxy
     image: nginx:1.21.3-alpine
     platform: linux/x86_64
     ports:
