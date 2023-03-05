@@ -54,9 +54,9 @@ CI/CD.
 4. В контейнере app выполните миграции, создайте суперпользователя и соберите статику.
 
     ```
-    sudo docker compose exec app python manage.py migrate
-    sudo docker compose exec app python manage.py createsuperuser
-    sudo docker compose exec app python manage.py collectstatic --no-input 
+    sudo docker compose exec backend python manage.py migrate
+    sudo docker compose exec backend python manage.py createsuperuser
+    sudo docker compose exec backend python manage.py collectstatic --no-input 
     ```
 
 5. Загрузите в бд ингредиенты командой ниже.
