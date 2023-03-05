@@ -32,7 +32,7 @@ CI/CD.
     git clone git@github.com:PavelHomov/foodgram-project-react.git
     ```
 
-2. Создайте .env файл в директории backend/foodgram/
+2. Создайте .env файл 
 
     ```
     SECRET_KEY=Optional
