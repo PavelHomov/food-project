@@ -1,6 +1,6 @@
 ![workflow](https://github.com/PavelHomov/foodgram-project-react/actions/workflows/main.yml/badge.svg)
 # Проект Foodgram - «Продуктовый помощник» 158.160.15.196
-# доступ к админке login: hi password: hi
+# доступ к админке login: hi@mail.ru password: hi
 Онлайн-сервис и API для него. 
 На этом сервисе пользователи смогут публиковать 
 рецепты, подписываться на публикации других 
