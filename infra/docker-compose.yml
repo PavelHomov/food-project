@@ -10,7 +10,9 @@ services:
       - ./.env
 
   backend:
-    image: pavelhomov/foodgram-backend:latest
+    build:
+      context: ../backend
+      dockerfile: Dockerfile
     platform: linux/x86_64
     restart: always
     volumes:
@@ -43,6 +45,8 @@ services:
     depends_on:
       - backend
       - frontend
+    env_file:
+      - ./.env
 
 volumes:
   static_value:

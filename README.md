@@ -1,5 +1,7 @@
 ![workflow](https://github.com/PavelHomov/foodgram-project-react/actions/workflows/main.yml/badge.svg)
-# Проект Foodgram - «Продуктовый помощник» 
+# Food project
+![Презентация](./media_for_readme/Presentation.gif)
+
 Онлайн-сервис и API для него. 
 На этом сервисе пользователи смогут публиковать 
 рецепты, подписываться на публикации других 
@@ -50,9 +52,10 @@ Python, Django, DRF, Docker, Docker-compose, PostgreSQL, nginx, Linux.
 4. В контейнере app выполните миграции, создайте суперпользователя и соберите статику.
 
     ```
-    sudo docker-compose exec backend python manage.py migrate
-    sudo docker-compose exec backend python manage.py createsuperuser
-    sudo docker-compose exec backend python manage.py collectstatic --no-input 
+    sudo docker-compose exec backend python3 manage.py makemigrations
+    sudo docker-compose exec backend python3 manage.py migrate
+    sudo docker-compose exec backend python3 manage.py createsuperuser
+    sudo docker-compose exec backend python3 manage.py collectstatic --no-input
     ```
 
 5. Загрузите в бд ингредиенты командой ниже.
